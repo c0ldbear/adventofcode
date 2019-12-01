@@ -55,7 +55,7 @@ class main {
         double fuelLoss = 2.0;
 
         fuel = mass / containerVolume;
-        fuel = Math.round(fuel);
+        fuel = Math.floor(fuel);
         fuel -= fuelLoss;
 
         return fuel;
