@@ -124,5 +124,15 @@ class main {
     }
 
     private static double TotalFuelCalculations(double mass) {
+        double fuel = FuelCalculations(mass);
+        double totalFuel = 0.0;
 
+        while (fuel > 0)
+        {
+            totalFuel += fuel;
+            fuel = FuelCalculations(fuel);
+        }
+        return totalFuel;
     }
+
+} // end of class main
