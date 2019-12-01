@@ -24,5 +24,5 @@
 <p><em>What is the sum of the fuel requirements</em> for all of the modules on your spacecraft when also taking into account the mass of the added fuel? (Calculate the fuel requirements for each module separately, then add them all up at the end.)</p>
 </article>
 <p>Your puzzle answer was <code>5042767</code>.</p><p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
-<p>At this point, you should <a href="/2019">return to your Advent calendar</a> and try another puzzle.</p>
-<p>If you still want to see it, you can <a href="1/input" target="_blank">get your puzzle input</a>.</p>
+<p>At this point, you should <a href="https://adventofcode.com/2019">return to your Advent calendar</a> and try another puzzle.</p>
+<p>If you still want to see it, you can <a href="https://adventofcode.com/2019/day/1/input" target="_blank">get your puzzle input</a>.</p>
