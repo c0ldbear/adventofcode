@@ -28,6 +28,7 @@ class main {
            {
                System.out.println("Test fail!");
                System.out.printf("\tCorrect answer is %.0f NOT %.0f\n", fuelAnswer, FuelCalculations(mass));
+               break;
            }
 
            System.out.println();
