@@ -13,22 +13,21 @@ class main {
     }
     
     public static void Tester02() {
-       double[] masses = {12, 14, 1969, 100756};
-       double[] fuelAnswers = {};
-       double mass;
+       double[] masses = {14, 1969, 100756};
+       double[] fuelAnswers = {2, 966, 50346};
+
        double fuelTest;
        double fuelAnswer;
        double totalFuel = 0.0;
        
        for(int i = 0; i < masses.length; i++)
        {
-           mass = masses[i];
            fuelAnswer = fuelAnswers[i];
-           fuelTest = FuelCalculations(mass);
+           fuelTest = TotalFuelCalculations(masses[i]);
 
-           System.out.printf("Testing mass: %.0f\n", mass);
+           System.out.printf("Testing mass: %.0f\n", masses[i]);
 
-           if(TestMasses(mass, fuelAnswer))
+           if(fuelTest == fuelAnswer)
            {
                System.out.println("Test pass.");
                System.out.printf("Answer: %.0f\n", fuelTest);
@@ -37,7 +36,7 @@ class main {
            {
                System.out.println("Test fail!");
                System.out.printf("\tCorrect answer is %.0f NOT %.0f\n", fuelAnswer, fuelTest);
-               break;
+               return;
            }
 
            totalFuel += fuelTest;
@@ -69,7 +68,6 @@ class main {
             System.out.printf("Required fuel: %.0f\n", totalFuel);
 
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         
@@ -91,7 +89,7 @@ class main {
 
            System.out.printf("Testing mass: %.0f\n", mass);
 
-           if(TestMasses(mass, fuelAnswer))
+           if(fuelTest == fuelAnswer)
            {
                System.out.println("Test pass.");
                System.out.printf("Answer: %.0f\n", fuelTest);
@@ -112,18 +110,6 @@ class main {
 
    }
 
-   public static boolean TestMasses(double mass, double fuelAnswer)
-   {
-       double fuel = FuelCalculations(mass);
-       if (fuel == fuelAnswer)
-       {
-           return true;
-       }
-       else
-       {
-           return false;
-       }
-   }
 
     private static double FuelCalculations(double mass) {
         double fuel = 0;
@@ -137,4 +123,6 @@ class main {
         return fuel;
     }
 
-} 
+    private static double TotalFuelCalculations(double mass) {
+
+    }
