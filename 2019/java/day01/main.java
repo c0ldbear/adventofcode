@@ -15,7 +15,7 @@ class main {
     
    public static void Assignment02() {
 
-        File inputFile = new File("input.txt");
+        File inputFile = new File("data/input.txt");
 
         try {
 
@@ -77,7 +77,7 @@ class main {
 
    public static void Assignment01() {
 
-        File inputFile = new File("input.txt");
+        File inputFile = new File("data/input.txt");
 
         try {
 
