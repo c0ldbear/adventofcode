@@ -5,10 +5,10 @@ class main {
 
     public static void main(String[] args) {
         System.out.println("Hello!");
-        Tester01();
+        TestFuelCalculations();
         Assignment01();
 
-        Tester02();
+        TestTotalFuelCalculations();
         Assignment02();
 
     }
@@ -39,7 +39,7 @@ class main {
         
    }
 
-    public static void Tester02() {
+    public static void TestTotalFuelCalculations() {
        double[] masses = {14, 1969, 100756};
        double[] fuelAnswers = {2, 966, 50346};
 
@@ -101,7 +101,7 @@ class main {
         
    }
 
-   public static void Tester01() {
+   public static void TestFuelCalculations() {
        double[] masses = {12, 14, 1969, 100756};
        double[] fuelAnswers = {2, 2, 654, 33583};
        double mass;
