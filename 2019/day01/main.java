@@ -8,8 +8,8 @@ class main {
 
    public static void Tester()
    {
-       double[] masses = {12};
-       double[] fuelAnswers = {2};
+       double[] masses = {12, 14, 1969, 100756};
+       double[] fuelAnswers = {2, 2, 654, 33583};
        double mass;
        double fuelAnswer;
        
