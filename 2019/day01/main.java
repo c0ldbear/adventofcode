@@ -1,13 +1,42 @@
+import java.io.*;
+import java.util.Scanner;
+
 class main {
 
-   public static void main(String[] args){
-      System.out.println("Hello!"); 
-      Tester();
+    public static void main(String[] args) {
+        System.out.println("Hello!");
+        Tester();
+        Assignment01();
+    }
 
+    public static void Assignment01() {
+
+        File inputFile = new File("input.txt");
+
+        try {
+
+            Scanner inputFileScanner = new Scanner(inputFile);
+
+            double mass = 0;
+            double totalFuel = 0.0;
+
+            while (inputFileScanner.hasNextDouble())
+            {
+               mass = inputFileScanner.nextDouble(); 
+               totalFuel += FuelCalculations(mass);
+            }
+
+            inputFileScanner.close();
+            System.out.printf("Required fuel: %.0f\n", totalFuel);
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        
    }
 
-   public static void Tester()
-   {
+   public static void Tester() {
        double[] masses = {12, 14, 1969, 100756};
        double[] fuelAnswers = {2, 2, 654, 33583};
        double mass;
