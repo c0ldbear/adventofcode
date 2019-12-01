@@ -9,9 +9,36 @@ class main {
         Assignment01();
 
         Tester02();
+        Assignment02();
 
     }
     
+   public static void Assignment02() {
+
+        File inputFile = new File("input.txt");
+
+        try {
+
+            Scanner inputFileScanner = new Scanner(inputFile);
+
+            double mass = 0;
+            double totalFuel = 0.0;
+
+            while (inputFileScanner.hasNextDouble())
+            {
+               mass = inputFileScanner.nextDouble(); 
+               totalFuel += TotalFuelCalculations(mass);
+            }
+
+            inputFileScanner.close();
+            System.out.printf("Required fuel: %.0f\n", totalFuel);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        
+   }
+
     public static void Tester02() {
        double[] masses = {14, 1969, 100756};
        double[] fuelAnswers = {2, 966, 50346};
@@ -47,7 +74,8 @@ class main {
        System.out.printf("Total fuel needed: %.0f\n", totalFuel);
 
    }
-    public static void Assignment01() {
+
+   public static void Assignment01() {
 
         File inputFile = new File("input.txt");
 
